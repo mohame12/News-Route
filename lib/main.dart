@@ -4,7 +4,7 @@ import 'package:news_app_route1/core/routing/routes.dart';
 import 'package:news_app_route1/features/splash_screen/presentation/pages/splash_screen.dart';
 void main()
 {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
