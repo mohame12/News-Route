@@ -8,4 +8,5 @@ class MyAssets
   static const String politicsLogo='assets/images/Politics.png';
   static const String busnessLogo='assets/images/bussines.png';
   static const String scienceLogo='assets/images/science.png';
+  static const String test='assets/images/test.png';
 }
