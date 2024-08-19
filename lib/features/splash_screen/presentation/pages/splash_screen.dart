@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_route1/core/themes/my_styles.dart';
 import 'package:news_app_route1/core/utile/my_assets.dart';
-import 'package:news_app_route1/features/details_Features/presentation/pages/details_features.dart';
+import 'package:news_app_route1/features/search_feature/presentation/pages/search_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -71,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen>
 
   void timeOut() {
     Future.delayed(const Duration(seconds: 3), () {
-      return Navigator.pushReplacementNamed(context, DetailsScreen.id);
+      return Navigator.pushReplacementNamed(context, SearchScreen.id);
     });
   }
 }
