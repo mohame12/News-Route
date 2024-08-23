@@ -10,7 +10,7 @@ class Routes
   static Map<String, WidgetBuilder>  routes = {
     SplashScreen.id:(context)=>const SplashScreen(),
     CategoryScreen.id:(context)=>const CategoryScreen(),
-    HomeCategoryScreen.id:(context)=> HomeCategoryScreen(),
+    HomeCategoryScreen.id:(context)=> const HomeCategoryScreen(),
     DetailsScreen.id:(context)=>const DetailsScreen(),
     SearchScreen.id:(context)=>const SearchScreen(),
 

@@ -14,7 +14,7 @@ import '../widgets/tap_bar_section.dart';
 
 class HomeCategoryScreen extends StatelessWidget {
   static const String id = 'HomeCategoryScreen';
-  HomeCategoryScreen({super.key});
+  const HomeCategoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,9 @@ class HomeCategoryScreen extends StatelessWidget {
               actions: [
                 IconButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, SearchScreen.id);
+                      Navigator.pushReplacementNamed(context, SearchScreen.id).then((_){
+                        context.read<NewsListCubit>().close();
+                      });
                     },
                     icon: const Icon(
                       FontAwesomeIcons.magnifyingGlass,
