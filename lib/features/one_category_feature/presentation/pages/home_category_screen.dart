@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:news_app_route1/core/utile/my_assets.dart';
+import 'package:news_app_route1/features/category_features/data/models/nav_model.dart';
 import '../../../../core/themes/my_colors.dart';
 import '../../../../core/themes/my_styles.dart';
 import '../widgets/list_view_of_category_home_screen.dart';
@@ -13,6 +14,7 @@ class HomeCategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+   NavigationModel data= ModalRoute.of(context)?.settings.arguments as NavigationModel;
     return Container(
       color: MyColors.whiteColor,
       child: Container(
@@ -23,7 +25,7 @@ class HomeCategoryScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             backgroundColor: MyColors.green,
-            title: Text('NewsApp',style: MyStyles.font22WhiteWeight400Exo,),
+            title: Text("${data.title}",style: MyStyles.font22WhiteWeight400Exo,),
             centerTitle: true,
             shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadiusDirectional.only(bottomStart:Radius.circular(50) ,bottomEnd:Radius.circular(50) )
@@ -42,7 +44,7 @@ class HomeCategoryScreen extends StatelessWidget {
           body: Column(
             children: [
               SizedBox(height: 15.h,),
-              const TapBarSection(),
+              TapBarSection(data: data,),
               const ListViewOfCategoryHomeScreen()
             ],
           ),
